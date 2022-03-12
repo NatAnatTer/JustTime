@@ -30,7 +30,7 @@ fun agoToText(seconds: Int) = when (seconds) {
     in 0..MINUTES -> "только что"
     in (MINUTES + 1)..HOURS -> {
         val minutes = seconds / MINUTES
-        "$minutes ${nameMinutesHours((minutes), isMinutes = true)} назад"
+        "$minutes ${nameMinutesHours(minutes, true)} назад"
     }
     in (HOURS + 1)..DAYS -> {
         val hours: Int = seconds / HOURS
